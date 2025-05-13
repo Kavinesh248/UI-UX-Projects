@@ -1,5 +1,5 @@
 const App = function () {
-  return <div className="bg-1 mx-auto">Hello World</div>;
+  return <div className="h1">Hello World</div>;
 };
 
 export default App;
