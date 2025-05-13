@@ -1,0 +1,208 @@
+@import url("https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300&display=swap");
+
+@import "tailwindcss";
+
+@theme {
+  /* Color palette from config */
+  --color-1: #ac6aff;
+  --color-2: #ffc876;
+  --color-3: #ff776f;
+  --color-4: #7adb78;
+  --color-5: #858dff;
+  --color-6: #ff98e2;
+
+  --stroke-1: #26242c;
+
+  --n-1: #ffffff;
+  --n-2: #cac6dd;
+  --n-3: #ada8c3;
+  --n-4: #757185;
+  --n-5: #3f3a52;
+  --n-6: #252134;
+  --n-7: #15131d;
+  --n-8: #0e0c15;
+  --n-9: #474060;
+  --n-10: #43435c;
+  --n-11: #1b1b2e;
+  --n-12: #2e2a41;
+  --n-13: #6c7275;
+
+  --font-sans: var(--font-sora), system-ui, sans-serif;
+  --font-code: var(--font-code), monospace;
+  --font-grotesk: var(--font-grotesk), sans-serif;
+  --font-sora: "Sora", sans-serif;
+  --font-code: "Source Code Pro", monospace;
+  --font-grotesk: "Space Grotesk", sans-serif;
+
+  --spacing-0-25: 0.0625rem;
+  --spacing-7-5: 1.875rem;
+  --spacing-15: 3.75rem;
+
+  --letterspacing-tagline: 0.15em;
+  --opacity-15: 0.15;
+  --z-1: 1;
+  --z-2: 2;
+  --z-3: 3;
+  --z-4: 4;
+  --z-5: 5;
+}
+
+@layer base {
+  :root {
+    color-scheme: dark;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    color: var(--n-1);
+    background: var(--n-8);
+    width: 100vw;
+    height: 100%;
+    overflow-x: hidden;
+    @apply font-sans text-base;
+  }
+}
+
+@layer utilities {
+  .container {
+    @apply mx-auto max-w-[77.5rem] px-5 md:px-10 lg:px-[3.75rem] xl:max-w-[87.5rem];
+  }
+
+  /* Typography Utilities */
+  .h1 {
+    @apply text-[2.5rem] leading-[3.25rem] font-semibold md:text-[2.75rem] md:leading-[3.75rem] lg:text-[3.25rem] lg:leading-[4.0625rem] xl:text-[3.75rem] xl:leading-[4.5rem];
+  }
+
+  .h2 {
+    @apply text-[1.75rem] leading-[2.5rem] md:text-[2rem] md:leading-[2.5rem] lg:text-[2.5rem] lg:leading-[3.5rem] xl:text-[3rem] xl:leading-tight;
+  }
+
+  .h3 {
+    @apply text-[2rem] leading-normal md:text-[2.5rem];
+  }
+
+  .h4 {
+    @apply text-[2rem] leading-normal;
+  }
+
+  .h5 {
+    @apply text-2xl leading-normal;
+  }
+
+  .h6 {
+    @apply text-lg leading-8 font-semibold;
+  }
+
+  .body-1 {
+    @apply text-[0.875rem] leading-[1.5rem] md:text-[1rem] md:leading-[1.75rem] lg:text-[1.25rem] lg:leading-8;
+  }
+
+  .body-2 {
+    @apply text-[0.875rem] leading-6 font-light md:text-base;
+  }
+
+  .caption {
+    @apply text-sm;
+  }
+
+  .tagline {
+    font-family: var(--font-grotesk);
+    font-weight: 300;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: var(--letterspacing-tagline);
+  }
+
+  .quote {
+    font-family: var(--font-code);
+    font-size: 1.125rem;
+    line-height: normal;
+  }
+
+  .button {
+    font-family: var(--font-code);
+    font-size: 0.75rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  /* Custom Utilities */
+  .tap-highlight-color {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  }
+
+  /* rotate utilities */
+  .rotate-45 {
+    @apply rotate-[45deg];
+  }
+
+  .rotate-90 {
+    @apply rotate-[90deg];
+  }
+
+  .rotate-135 {
+    @apply rotate-[135deg];
+  }
+
+  .rotate-180 {
+    @apply rotate-[180deg];
+  }
+
+  .rotate-225 {
+    @apply rotate-[225deg];
+  }
+
+  .rotate-270 {
+    @apply rotate-[270deg];
+  }
+
+  .rotate-315 {
+    @apply rotate-[315deg];
+  }
+
+  .rotate-360 {
+    @apply rotate-[360deg];
+  }
+
+  .-rotate-45 {
+    @apply rotate-[-45deg];
+  }
+
+  .-rotate-90 {
+    @apply rotate-[-90deg];
+  }
+
+  .-rotate-135 {
+    @apply rotate-[-135deg];
+  }
+
+  .-rotate-180 {
+    @apply rotate-[-180deg];
+  }
+
+  .-rotate-225 {
+    @apply rotate-[-225deg];
+  }
+
+  .-rotate-270 {
+    @apply rotate-[-270deg];
+  }
+
+  .-rotate-315 {
+    @apply rotate-[-315deg];
+  }
+
+  .-rotate-360 {
+    @apply rotate-[-360deg];
+  }
+}
