@@ -6,12 +6,12 @@
 
 @theme {
   /* Color palette from config */
-  --color-1: #ac6aff;
-  --color-2: #ffc876;
-  --color-3: #ff776f;
-  --color-4: #7adb78;
-  --color-5: #858dff;
-  --color-6: #ff98e2;
+  --color-primary-1: #ac6aff;
+  --color-primary-2: #ffc876;
+  --color-primary-3: #ff776f;
+  --color-primary-4: #7adb78;
+  --color-primary-5: #858dff;
+  --color-primary-6: #ff98e2;
 
   --color-stroke-1: #26242c;
 
