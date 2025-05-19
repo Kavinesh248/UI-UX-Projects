@@ -1,5 +1,5 @@
-import { service1, service2, check } from "../assets";
-import { brainwaveServices } from "../constants";
+import { service1, service2, check, service3 } from "../assets";
+import { brainwaveServices, brainwaveServicesIcons } from "../constants";
 import {
   PhotoChatMessage,
   Gradient,
@@ -80,9 +80,43 @@ const Services = function () {
                   The world&apos;s most powerful AI photo and video art
                   generation engine. What will you create?
                 </p>
+
+                <ul className="flex items-center justify-between">
+                  {brainwaveServicesIcons.map((item, index) => (
+                    <li
+                      key={index}
+                      className={`flex items-center justify-center ${index === 2 ? "bg-conic-gradient md:2-[4.5rem] h-[3rem] w-[3rem] rounded-2xl p-0.25 md:w-[4.5rem]" : "bg-n-6 flex h-10 w-10 rounded-2xl md:h-15 md:w-15"}`}
+                    >
+                      <div
+                        className={
+                          index === 2
+                            ? "bg-n-8 flex h-full w-full items-center justify-center rounded-[1rem]"
+                            : ""
+                        }
+                      >
+                        <img src={item} width={24} height={24} alt={item} />
+                      </div>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              <div className="bg-n-8 relative h-[20rem] overflow-hidden rounded-xl md:h-[25rem]">
+                <img
+                  src={service3}
+                  className="h-full w-full object-cover"
+                  width={520}
+                  height={400}
+                  alt="Scary robot"
+                />
+
+                <VideoChatMessage />
+                <VideoBar />
               </div>
             </div>
           </div>
+
+          <Gradient />
         </div>
       </div>
     </Section>

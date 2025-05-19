@@ -1,6 +1,11 @@
-const Heading = function ({ className, title, text }) {
+import Tagline from "./Tagline";
+
+const Heading = function ({ className, title, text, tag }) {
   return (
-    <div className={`${className} mx-auto mb-12 max-w-[50rem] lg:mb-20`}>
+    <div
+      className={`${className} mx-auto mb-12 max-w-[50rem] md:text-center lg:mb-20`}
+    >
+      {tag && <Tagline className="mb-4 md:justify-center">{tag}</Tagline>}
       {title && <h2 className="h2">{title}</h2>}
       {text && <p className="body-2 text-n-4 mt-4">{text}</p>}
     </div>
