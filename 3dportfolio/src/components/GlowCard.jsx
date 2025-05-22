@@ -3,7 +3,6 @@ import { useRef } from "react";
 const GlowCard = function ({ card, children, index }) {
   // refs for all the cards
   const cardRefs = useRef([]);
-  console.log(cardRefs);
 
   // when mouse moves over a card, rotate the glow effect
   const handleMouseMove = (index) => (e) => {

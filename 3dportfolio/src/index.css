@@ -86,6 +86,7 @@ section {
 
   .hero-text {
     @apply flex flex-col justify-center md:text-[60px] text-[30px] font-semibold relative z-10 pointer-events-none;
+
     img {
       @apply size-8 md:size-10 object-contain;
     }
@@ -239,7 +240,7 @@ section {
   }
 
   .timeline-wrapper {
-    @apply absolute top-0 xl:left-[35.5vw] md:left-10 left-5 h-full flex justify-center;
+    @apply absolute top-0 xl:left-[35.5vw] md:left-10 left-5 h-full  flex justify-center;
   }
 
   .timeline {
@@ -266,7 +267,7 @@ section {
     @apply flex flex-col md:justify-center items-center xl:gap-5 xl:h-[50vh] overflow-hidden relative z-10 group-hover:cursor-grab;
 
     & p {
-      @apply text-lg 2xl:text-2xl pb-5 xl:pb-0 font-semibold text-white-50 text-center;
+      @apply text-lg 2xl:text-lg pb-5 xl:pb-0 font-semibold text-white-50 text-center;
     }
   }
 
@@ -305,7 +306,7 @@ section {
     }
 
     p {
-      @apply text-center md:text-start cursor-pointer;
+      @apply text-center md:text-start;
     }
 
     .socials {
