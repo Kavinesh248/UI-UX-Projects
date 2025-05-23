@@ -1,0 +1,138 @@
+@font-face {
+  font-family: "PP Neue Montreal Book";
+  src: local("PP Neue Montreal Book"),
+    url("/fonts/ppneuemontreal-book.woff") format("woff");
+}
+
+@font-face {
+  font-family: "PP Neue Montreal Medium";
+  src: local("PP Neue Montreal Medium"),
+    url("/fonts/ppneuemontreal-medium.woff") format("woff");
+}
+
+@font-face {
+  font-family: "PP Neue Montreal Bold";
+  src: local("PP Neue Montreal Bold"),
+    url("/fonts/ppneuemontreal-bold.woff") format("woff");
+}
+
+@import "tailwindcss";
+
+@theme {
+  --color-black-primary: #020100;
+  --color-white-primary: #fff;
+  --color-purple-primary: #a36dff;
+  --color-green-primary: rgb(122, 255, 23);
+  --color-red-primary: rgb(252, 32, 28);
+  --color-pink-primary: #ffb8f5;
+  --color-blue-primary: rgb(8, 33, 196);
+
+  --color-gray-100: rgb(219, 219, 219);
+  --color-gray-200: #f1f1f3;
+  --color-gray-300: rgb(136, 138, 139);
+
+  --font-ppneue-regular: "PP Neue Montreal Book", sans-serif;
+  --font-ppneue-medium: "PP Neue Montreal Medium", sans-serif;
+  --font-ppneue-bold: "PP Neue Montreal Bold", sans-serif;
+}
+
+@layer base {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* cursor: none; */
+  }
+
+  body {
+    font-family: var(--font-ppneue-regular);
+    background-color: var(--color-black-primary);
+    color: var(--color-gray-200);
+    overflow-x: hidden;
+  }
+}
+
+@layer utilities {
+  .container {
+    max-width: 1200px;
+  }
+
+  .padding-common {
+    @apply px-5 md:px-10;
+  }
+
+  .flex-center {
+    @apply flex items-center justify-between;
+  }
+
+  .hero-text {
+    @apply flex flex-col justify-center lg:text-[4.8rem] leading-[1.1] text-[40px] font-semibold relative z-10 pointer-events-none;
+
+    h1 {
+      @apply tracking-wide;
+    }
+  }
+
+  .cta-people {
+    @apply size-8 overflow-hidden rounded-full border border-gray-300;
+  }
+
+  .text-base {
+    @apply text-[1.2rem] mt-4 md:text-[1.6px] lg:text-[2rem] leading-[1.1] text-gray-300;
+  }
+
+  .gsap-translate {
+    @apply translate-y-4 opacity-0;
+  }
+
+  .cta-btn {
+    @apply w-full flex items-center cursor-pointer gap-1 text-base justify-center font-bold bg-gray-200 py-2 mt-12 text-black;
+  }
+
+  .gradient-edge {
+    @apply w-36 h-full absolute bottom-0 z-20;
+  }
+
+  .marquee {
+    overflow: hidden;
+    position: relative;
+  }
+  .marquee-box {
+    display: flex;
+    align-items: center;
+    width: 200%;
+    height: 100%;
+    position: absolute;
+    overflow: hidden;
+    animation: marquee 20s linear infinite;
+  }
+  .marquee-item {
+    float: left;
+  }
+  @keyframes marquee {
+    0% {
+      left: 0;
+    }
+    100% {
+      left: -100%;
+    }
+  }
+
+  .gradient-edge:nth-of-type(1) {
+    left: 0;
+    background: rgb(0, 0, 0);
+    background: linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 1) 0%,
+      rgba(255, 255, 255, 0) 100%
+    );
+  }
+  .gradient-edge:nth-of-type(2) {
+    right: 0;
+    background: linear-gradient(
+      -90deg,
+      rgba(0, 0, 0, 1) 0%,
+      rgba(255, 255, 255, 0) 100%
+    );
+  }
+}
