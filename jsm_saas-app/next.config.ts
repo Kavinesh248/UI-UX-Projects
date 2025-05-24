@@ -4,7 +4,7 @@ const nextConfig: NextConfig = {
   images: {
     remotePatterns: [
       {
-        hostname: "imag.clerk.com",
+        hostname: "img.clerk.com",
       },
     ],
   },
