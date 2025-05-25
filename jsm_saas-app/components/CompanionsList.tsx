@@ -7,26 +7,23 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
-
-import { cn } from "@/lib/utils";
-import Image from "next/image";
+import { cn, getSubjectColor } from "@/lib/utils";
 import Link from "next/link";
-
-import { getSubjectColor } from "@/lib/utils";
+import Image from "next/image";
 
 interface CompanionsListProps {
   title: string;
   companions?: Companion[];
-  className?: string;
+  classNames?: string;
 }
 
-export default function CompanionsList({
+const CompanionsList = ({
   title,
   companions,
-  className,
-}: CompanionsListProps) {
+  classNames,
+}: CompanionsListProps) => {
   return (
-    <article className={cn("companion-list", className)}>
+    <article className={cn("companion-list", classNames)}>
       <h2 className="font-bold text-3xl">{title}</h2>
 
       <Table>
@@ -97,4 +94,6 @@ export default function CompanionsList({
       </Table>
     </article>
   );
-}
+};
+
+export default CompanionsList;
