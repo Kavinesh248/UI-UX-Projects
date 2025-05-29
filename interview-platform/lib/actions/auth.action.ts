@@ -45,6 +45,8 @@ export async function signUp(params: SignUpParams) {
       success: true,
       message: "Account created successfully. Please sign in.",
     };
+
+    /* eslint-disable  @typescript-eslint/no-explicit-any */
   } catch (error: any) {
     console.error("Error creating a user:", error);
 
@@ -116,4 +118,10 @@ export async function getCurrentUser(): Promise<User | null> {
 
     return null;
   }
+}
+
+export async function isAuthenticated() {
+  const user = await getCurrentUser();
+
+  return !!user;
 }
